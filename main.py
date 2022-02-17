@@ -12,11 +12,11 @@ def name(point):
    string = "harshal"
    name = string + str(point)
    print(name)
-   with open('Email.txt', 'a+') as the_file:
+   with open('Output/Email.txt', 'a+') as the_file:
      the_file.write(name+'\n')
 #--------------------------------
 def generate(gg):
- with open('Email.txt') as file:
+ with open('Output/Email.txt') as file:
    while line := file.readline():
      lines = line.rstrip() 
      address = str(lines)+"@"+gg
@@ -27,7 +27,7 @@ def generate(gg):
      if h == 201:
         print(colored(f'Account Created with email{address}','blue'))
         time.sleep(0.2)
-        with open('Mail.txt', 'a+') as the:
+        with open('Output/Mail.txt', 'a+') as the:
                the.write(address+'\n')
      else:
         print(colored(f"Account Creation Failed Of {address}",'red'))
