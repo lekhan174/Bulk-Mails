@@ -20,7 +20,7 @@ def generate(gg):
    while line := file.readline():
      lines = line.rstrip() 
      address = str(lines)+"@"+gg
-     password = "Mihir1703#"    
+     password = "Sam192@@"    
      data = {"address": address, "password": password}       
      account = requests.post(base_url + "accounts", headers=header, json=data)
      h= account.status_code
